@@ -1,0 +1,866 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Hudi', sans-serif;
+    font-size: 1.2rem;
+    background-color: rgb(46, 46, 46);
+}
+.main{
+    font-family: "Montserrat", sans-serif;
+}
+h1{
+    font-size: clamp(26px,3.5vw,48px); 
+    /* 3 parametri per clamp. Minimum-size, sopra il minimum-size, maximum size   */
+}
+h2{
+    font-size: clamp(20px,2vw,40px);
+}
+p{
+    font-family: 'Hudi', sans-serif;
+    font-size: clamp(14px,.6vw,200px);
+    line-height: 1.8;
+    color: rgb(216, 216, 216);
+}
+.intestazione{
+    display: column;
+    padding-bottom: 3em;
+}
+
+nav{
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 6vh;
+    background:  #1f1f1f;
+    z-index: 123;
+}
+
+
+.yellowlight{
+    color: #ffd900;
+
+}
+.highlight{
+    /* background:  #ffe659;  */
+    background: #ffc400;
+    color: black;
+}
+.highlight-lite{
+    background: white;
+    color: black;
+    text-decoration: none;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* INTRO */
+
+.landing{
+    margin-top: 6vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "landing image";
+    height: 80vh;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    width: 80%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.nav-links li a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+.landing-image{
+    margin-top: 4em;
+    grid-area: image;
+    background: url("./src/fullsizeoutput_5.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 70%;
+}
+.description{
+    grid-area: landing;
+    padding: 3em;
+    margin-top: 4em;
+    font-family: "hidi", sans-serif;
+    
+}
+.description h1{
+    margin:0;
+}
+.description p{
+    margin:0;
+}
+
+
+/* INTRODUCTION */
+.intro-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "introduction svg";
+    height: 120vh;
+}
+.intro-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: introduction;
+    height: 100%;
+    color: rgb(216, 216, 216);
+    font-family: "hidi", sans-serif;
+    padding: 3em;
+}
+.intro-text p{
+    margin-top: 1.2em;
+}
+
+.intro-svg{
+    grid-area: svg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+/* ANALISI */
+.analisi{
+    height: 120vh;
+}
+.analisi-grid{
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: auto;
+    grid-template-areas: "description graph";
+    height: 100%;
+}
+
+.analisi-description{
+    grid-area: description;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    font-family: "hidi", sans-serif;
+    grid-area: 1/1/2/2;
+    padding: 4em;
+}
+
+.best50key{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 4em;
+}
+
+.best50key rect{
+    fill: rgb(255, 136, 0);
+}
+
+.best50key g{
+    color: rgb(216, 216, 216);
+}
+
+#best50svg line{
+    stroke: rgb(87, 87, 87);
+}
+.titleTop50Key{
+    font-size: 1.3em;
+    fill: rgb(216, 216, 216);
+}
+
+.xAxisTitle{
+    font-size: 1.3rem;
+}
+
+/* ANALISI TEMPORALE */
+.analisi-temporale{
+    height: 180vh;
+}
+.analisi-temporale-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 22% 400px 1000px;
+    grid-template-areas: 
+    "annualeDescrizione annualeDescrizione"
+    "graficoAnnuale graficoMensile"
+    "coronavirus ventidiciannove";
+    height: 100%;
+}
+
+/* ANALISI ANNUALE */
+
+.analisiAnnualeDescription{
+    grid-area: annualeDescrizione;
+    font-family: "hidi", sans-serif;
+    padding: 4rem;
+}
+
+.graficoAnnuale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(216, 216, 216);
+    grid-area: graficoAnnuale;
+}
+
+.linePath{
+    fill: none;
+    stroke: rgb(255, 136, 0);
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+
+.graficoAnnuale line{
+    stroke: rgb(87, 87, 87);
+}
+
+/* DESCRIZIONE GRAFICO MENSILE */
+
+.analisiMensileDescription{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: coronavirus;
+    font-family: "hidi", sans-serif;
+    margin: 8rem;
+}
+
+/* GRAFICO MENSILE */
+
+.graficoMensile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(216, 216, 216);
+    grid-area: graficoMensile;
+}
+
+/* GRAFICO 2020 VS 2021 */
+
+.graficoMensilePiccolo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: ventidiciannove;
+}
+#graficoMensilePiccolosvg{
+    /* margin: 8rem;
+    margin-top: 4rem; */
+    color: rgb(216, 216, 216);
+}
+#graficoMensilePiccolosvg rect{
+    fill: rgb(255, 136, 0);
+}
+
+.ciao{
+    text-anchor: middle;
+    transform: translate(-40px,0);
+}
+
+/* MAPPE */
+
+/* Mappa Comuni */
+
+.analisi-geografica-comuni{
+    position: relative;
+    height: 160vh;
+    width: 100%;
+}
+.analisi-geografica-comuni-grid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+    "mappaComuni descrizioneComuni"
+    "comuni20key descrizioneComuni";
+    height: 100%;
+}
+
+.comuni20key{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: comuni20key;
+    
+}
+.comuni20key rect{
+    fill: rgb(255, 136, 0);
+}
+.comuni20key g{
+    color: rgb(216, 216, 216);
+}
+
+
+.mapboxgl-popup-content{
+    background: #1f1f1f;
+    color: white;
+    font-style: 'Monserrat', sans-serif;
+}
+
+.mapComuni{
+    grid-area: mappaComuni;
+}
+.comuniDescription{
+    grid-area: descrizioneComuni;
+    font-family: "hidi", sans-serif;
+    padding: 3rem;
+}
+
+
+#map-comuni {
+    position: absolute;
+    top: 0;
+  }
+.map-overlay-comuni {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+  }
+  
+  #features-comuni {
+    position: relative;
+    height: 180px;
+    width: 300px;
+    margin: 1em;
+    top:1em;
+    padding: 1em;
+  }
+  
+  #legend-comuni {
+    font-family: "hidi", sans-serif;
+    position: relative;
+    top: 2em;
+    padding: 2.2em;
+    height: 180px;
+    margin: 1em;
+    width: 150px;
+    font-size: 13px;
+  }
+  #pd-comuni{
+    font-family: "hidi", sans-serif;
+    margin-top: 2em;
+    color: rgb(46, 46, 46);
+  }
+  #pd-comuni strong{
+    font-family: "hidi", sans-serif;
+    color: rgb(46, 46, 46);
+  }
+  #pd-comuni em{
+    font-family: "hidi", sans-serif;
+    color: rgb(46, 46, 46);
+  }
+  #pd-comuni p{
+    font-family: "hidi", sans-serif;
+    color: rgb(46, 46, 46);
+  }
+  .legend-key-comuni {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+/* Mappa quartieri Trento */
+
+.analisi-geografica{
+    position: relative;
+    height: 160vh;
+    width: 100%;
+}
+.analisi-geografica-grid{
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: 
+    "mappaQuartieri descrizioneQuartieri descrizioneQuartieri"
+    ". droga furti"
+    ;
+    height: 100%;
+}
+.drogatrento{
+    grid-area: droga;
+    display: flex;
+    justify-content:center;
+    color: rgb(216, 216, 216) ;
+    padding: 2em;
+}
+
+.furtitrento{
+    grid-area: furti;
+    display: flex;
+    justify-content:center;
+
+    color: rgb(216, 216, 216) ;
+    padding: 2em;
+}
+#conclusione-criminal{
+    grid-area: conclusione;
+}
+.mapboxgl-popup-content{
+    background: #1f1f1f;
+    color: white;
+    font-style: 'Monserrat', sans-serif;
+}
+
+.mapQuartieri{
+    grid-area: mappaQuartieri;
+}
+
+#map {
+    position: absolute;
+    width: 50%; 
+    height: 80%;
+    top: 0;
+    bottom: 0;
+  }
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+  }
+  
+#features {
+    position: relative;
+    height: 180px;
+    width: 300px;
+    margin: 1em;
+    top:1em;
+    padding: 1em;
+  }
+  
+#legend {
+    font-family: "hidi", sans-serif;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2em;
+    padding: 1.4em;
+    height: 150px;
+    margin: 1em;
+    width: 120px;
+    font-size: 13px;
+  }
+#pd{
+    font-family: "hidi", sans-serif;
+    margin-top: 2em;
+    color: rgb(46, 46, 46);
+  }
+  #pd strong{
+    color: rgb(46, 46, 46);
+  }
+  #pd em{
+    color: rgb(46, 46, 46);
+  }
+  #pd p{
+    color: rgb(46, 46, 46);
+  }
+  
+.legend-key {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    font-size:  clamp(10px,.8vw,20px)!important;
+  }
+
+.quartieriDescription{
+    grid-area: descrizioneQuartieri;
+    font-family: "hidi", sans-serif;
+    padding: 4rem;
+}
+
+
+
+
+
+  /* animazione */
+.custom-p{
+    opacity: 0;
+    transition: opacity 3s;
+}
+.scroll-class{
+    opacity: 1;
+}
+ 
+
+/* Progress bar */
+
+.wrapper {
+    width: 100%;
+    min-height: 80px;
+    display: block;
+}
+.progressbar-wrapper {
+    width: 250px;
+    height: 30px;
+    top: 50%;
+    left: 25%;
+    position: relative;
+    transform: translate(-70%, 50%);
+}
+.progressbar {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(-20deg);
+}
+.side {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(254, 254, 254, 0.3);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.bottom {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+.top {
+    transform: translate(0, -100%) rotateX(90deg);
+    transform-origin: bottom;
+}
+.back {
+    transform: translateZ(-30px);
+}
+.left {
+    width: 30px;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    background-color: rgb(255, 136, 0, .6);
+}
+.bar {
+    height:100%;
+    background-color: rgb(255, 136, 0,.6);
+    width:70%;
+}
+.bar p{
+    padding: .3em;
+}
+
+
+/* footer */
+
+.conclusioni{
+    height: 120vh;
+
+}
+.conclusioni-grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "text image";
+    height: 100%;
+}
+.footer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    grid-area: text;
+}
+.footer-image{
+    grid-area: image;
+    background: url("./src/fullsizeoutput_5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    color: white;
+}
+.source{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.fonti{
+    font-family: 'Hudi', sans-serif;
+    display: flex;
+    align-items: center;
+    
+    color: white;
+    font-size: .6rem;
+    height: 10vh;
+    margin-top: 10em;
+}
+
+.fonti ul{
+    display: flex;
+    list-style: none;
+}
+
+.fonti li{
+    padding-left: 5rem;
+}
+
+
+
+
+
+
+/* mediaqueries */
+
+@media all and (min-width: 1690px) { 
+    /* .main{
+        background-color: white;
+    } */
+    .analisi-temporale{
+        height: 220vh
+    }
+}
+
+/* Schermi Desktop o Portatili */
+@media all and (min-width: 1200px) and (max-width: 1689px) { 
+    /* .main{
+        background-color: black;
+    } */
+    .intro-grid{
+        height: 150vh;
+    }
+    .landing{
+        height: 120vh;
+    }
+    .analisi-temporale{
+        height: 250vh
+    }
+
+    .analisi-geografica{
+        height: 180vh;
+    }
+
+    .analisi-geografica-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: 
+        "mappaQuartieri descrizioneQuartieri "
+        "droga  furti"
+        ;
+        height: 100%;
+    }
+    #map{
+        height: 50%;
+    }
+
+    /* progressbar */
+
+    .progressbar-wrapper {
+        height: 30px;
+        position: relative;
+        transform: translate(-50%, 50%);
+    }
+
+    .back {
+        transform: translateZ(-30px);
+    }
+    .left {
+        width: 30px;
+
+    }
+    /* mappe */
+    
+
+
+ }
+
+/* Tablet in modalità orizzontale */
+@media all and (min-width: 737px) and (max-width: 1199px) { 
+    /* .main{
+        background-color: red;
+    } */
+    /* intro */
+    .landing{
+        height:180vh;
+    }
+    .intro{
+        height:150vh;
+    }
+    .intro-grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "introduction"
+        "svg"
+        ;
+        height: 100%;
+    }
+    .intro-svg{
+        grid-area: svg;
+    }
+    
+    /* Analisi */
+    .analisi{
+        height:200vh;
+    }
+
+    .analisi-grid{
+        display: grid;
+        grid-template-columns: auto 600px;
+        grid-template-rows: 1fr;
+        grid-template-areas: "description graph";
+    }
+    .analisi-temporale{
+        height: 350vh;
+    }
+    .analisi-temporale-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 22% 400px 400px 1000px;
+        grid-template-areas: 
+        "annualeDescrizione annualeDescrizione"
+        "graficoAnnuale graficoAnnuale"
+        "graficoMensile graficoMensile"
+        "coronavirus ventidiciannove";
+        height: 100%;
+        justify-content: center;
+        
+    }
+    .analisi-description{
+        padding: 2em;
+        height: 100%;
+    }
+   
+
+    .analisiMensileDescription{
+        
+        margin: 2rem;
+    }
+
+    /* mappe */
+    .analisi-geografica{
+        height: 220vh;
+    }
+    .analisi-geografica-grid{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 30% 40% 30%;
+        grid-template-areas: 
+        "mappaQuartieri mappaQuartieri descrizioneQuartieri descrizioneQuartieri"
+        "mappaQuartieri mappaQuartieri concluisone concluisone"
+        "droga  droga furti furti"
+        ;
+        height: 100%;
+    }
+
+    .analisi-geografica-comuni{
+        
+        height: 200vh;
+        
+    }
+    
+    #map{
+        height: 50%;
+    }
+
+    .comuni20key{
+        margin: 2em;
+    }
+
+
+    /* progressbar */
+
+    .progressbar-wrapper {
+        height: 30px;
+        position: relative;
+        transform: translate(-30%, 50%);
+    }
+
+    .back {
+        transform: translateZ(-30px);
+    }
+    .left {
+        width: 30px;
+
+    }
+    .conclusioni{
+        height: 150vh;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
