@@ -55,7 +55,9 @@ const render = data =>{
         .selectAll('.domain, .tick line')
         .remove();
 
-    
+    g.selectAll('.tick text')
+        .style('font-size', '1.3em' )
+
     const xAxisG = g.append('g')
         .call(xAxis)
         .attr('transform', `translate(0, ${innerHeight})`);

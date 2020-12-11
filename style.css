@@ -24,7 +24,7 @@ h2{
 }
 p{
     font-family: 'Hudi', sans-serif;
-    font-size: clamp(14px,.6vw,200px);
+    font-size: clamp(16px,.6vw,200px);
     line-height: 1.8;
     color: rgb(216, 216, 216);
 }
@@ -410,6 +410,7 @@ a{
     grid-area: droga;
     display: flex;
     justify-content:center;
+    align-items: center;
     color: rgb(216, 216, 216) ;
     padding: 2em;
 }
@@ -418,6 +419,7 @@ a{
     grid-area: furti;
     display: flex;
     justify-content:center;
+    align-items: center;
 
     color: rgb(216, 216, 216) ;
     padding: 2em;
@@ -501,6 +503,7 @@ a{
     grid-area: descrizioneQuartieri;
     font-family: "hidi", sans-serif;
     padding: 4rem;
+    
 }
 
 
@@ -666,13 +669,13 @@ a{
     }
 
     .analisi-geografica{
-        height: 180vh;
+        height: 220vh;
     }
 
     .analisi-geografica-grid{
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 70% 30%;
         grid-template-areas: 
         "mappaQuartieri descrizioneQuartieri "
         "droga  furti"
@@ -699,6 +702,22 @@ a{
 
     }
     /* mappe */
+
+    .analisi-geografica{
+        height: 180vh;
+    }
+    .drogatrento{
+
+        align-items: top;
+
+    }
+    
+    .furtitrento{
+
+        align-items: top;
+    
+
+    }
     
 
 
@@ -770,7 +789,7 @@ a{
 
     /* mappe */
     .analisi-geografica{
-        height: 220vh;
+        height: 300vh;
     }
     .analisi-geografica-grid{
         display: grid;
