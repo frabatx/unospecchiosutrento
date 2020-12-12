@@ -731,9 +731,9 @@ a{
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 737px) and (max-width: 1199px) { 
-    /* .main{
+    .main{
         background-color: red;
-    } */
+    }
     /* intro */
     .landing{
         height:180vh;
@@ -767,7 +767,7 @@ a{
         grid-template-areas: "description graph";
     }
     .analisi-temporale{
-        height: 350vh;
+        height: 400vh;
     }
     .analisi-temporale-grid{
         display: grid;
@@ -789,13 +789,13 @@ a{
    
 
     .analisiMensileDescription{
-        
+        height: 100%;
         margin: 2rem;
     }
 
     /* mappe */
     .analisi-geografica{
-        height: 300vh;
+        height: 330vh;
     }
     .analisi-geografica-grid{
         display: grid;
