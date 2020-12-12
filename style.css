@@ -21,7 +21,7 @@ h2{
 }
 p{
     font-family: 'Hudi', sans-serif;
-    font-size: clamp(16px,.6vw,200px);
+    font-size: clamp(15px,.6vw,200px);
     line-height: 1.8;
     color: rgb(216, 216, 216);
 }
@@ -195,7 +195,7 @@ a{
 
 /* ANALISI TEMPORALE */
 .analisi-temporale{
-    height: 180vh;
+    height: 220vh;
 }
 .analisi-temporale-grid{
     display: grid;
@@ -244,7 +244,7 @@ a{
     align-items: center;
     grid-area: coronavirus;
     font-family: "hidi", sans-serif;
-    margin: 8rem;
+    padding: 3rem;
 }
 
 /* GRAFICO MENSILE */
@@ -350,7 +350,7 @@ a{
     width: 300px;
     margin: 1em;
     top:1em;
-    padding: 1em;
+    padding: 10px;
   }
   
   #legend-comuni {
@@ -458,7 +458,7 @@ a{
     width: 300px;
     margin: 1em;
     top:1em;
-    padding: 1em;
+    padding: 10px;
   }
   
 #legend {
@@ -662,7 +662,7 @@ a{
         height: 200vh;
     }
     .analisi-temporale{
-        height: 280vh
+        height: 350vh
     }
 
     .analisi-geografica{
@@ -790,7 +790,6 @@ a{
 
     .analisiMensileDescription{
         height: 100%;
-        margin: 2rem;
     }
 
     /* mappe */
