@@ -622,7 +622,7 @@ a{
     color: white;
     font-size: .6rem;
     height: 10vh;
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 .fonti ul{
@@ -652,9 +652,9 @@ a{
 
 /* Schermi Desktop o Portatili */
 @media all and (min-width: 1200px) and (max-width: 1689px) { 
-    .main{
+    /* .main{
         background-color: black;
-    }
+    } */
     .intro-grid{
         height: 150vh;
     }
@@ -728,9 +728,9 @@ a{
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 737px) and (max-width: 1199px) { 
-    .main{
+    /* .main{
         background-color: red;
-    }
+    } */
     /* intro */
     .landing{
         height:180vh;
