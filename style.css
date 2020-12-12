@@ -200,7 +200,7 @@ a{
 .analisi-temporale-grid{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 22% 400px 1000px;
+    grid-template-rows: 30% 400px 1000px;
     grid-template-areas: 
     "annualeDescrizione annualeDescrizione"
     "graficoAnnuale graficoMensile"
@@ -576,7 +576,7 @@ a{
 /* footer */
 
 .conclusioni{
-    height: 120vh;
+    height: 150vh;
 
 }
 .conclusioni-grid{
@@ -652,17 +652,17 @@ a{
 
 /* Schermi Desktop o Portatili */
 @media all and (min-width: 1200px) and (max-width: 1689px) { 
-    /* .main{
+    .main{
         background-color: black;
-    } */
+    }
     .intro-grid{
-        height: 150vh;
+        height: 200vh;
     }
     .landing{
-        height: 120vh;
+        height: 200vh;
     }
     .analisi-temporale{
-        height: 250vh
+        height: 280vh
     }
 
     .analisi-geografica{
@@ -720,7 +720,10 @@ a{
 
     }
     .conclusioni{
-        height: 200vh;
+        height: 250vh;
+    }
+    .footer{
+        height: 100vh;
     }
 
 
@@ -728,9 +731,9 @@ a{
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 737px) and (max-width: 1199px) { 
-    /* .main{
+    .main{
         background-color: red;
-    } */
+    }
     /* intro */
     .landing{
         height:180vh;
@@ -808,7 +811,7 @@ a{
 
     .analisi-geografica-comuni{
         
-        height: 200vh;
+        height: 250vh;
         
     }
     
@@ -837,9 +840,12 @@ a{
 
     }
     .conclusioni{
-        height: 150vh;
+        height: 200vh;
     }
 
+    .footer{
+        height: 100vh;
+    }
 
 
 }
