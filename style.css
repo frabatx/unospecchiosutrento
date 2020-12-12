@@ -731,9 +731,9 @@ a{
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 737px) and (max-width: 1199px) { 
-    .main{
+    /* .main{
         background-color: red;
-    }
+    } */
     /* intro */
     .landing{
         height:180vh;
