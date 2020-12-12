@@ -5,9 +5,6 @@
 }
 
 body{ 
-    display: flex;
-    justify-content: center;
-    align-content: center;
     font-family: 'Hudi', sans-serif;
     font-size: 1.2rem;
     background-color: rgb(46, 46, 46);
@@ -645,9 +642,9 @@ a{
 /* mediaqueries */
 
 @media all and (min-width: 1690px) { 
-    /* .main{
+    .main{
         background-color: white;
-    } */
+    }
     .analisi-temporale{
         height: 220vh
     }
@@ -655,9 +652,9 @@ a{
 
 /* Schermi Desktop o Portatili */
 @media all and (min-width: 1200px) and (max-width: 1689px) { 
-    /* .main{
+    .main{
         background-color: black;
-    } */
+    }
     .intro-grid{
         height: 150vh;
     }
@@ -702,9 +699,14 @@ a{
 
     }
     /* mappe */
+    .analisi-geografica-comuni{
+        
+        height: 200vh;
+        
+    }
 
     .analisi-geografica{
-        height: 180vh;
+        height: 250vh;
     }
     .drogatrento{
 
@@ -715,19 +717,20 @@ a{
     .furtitrento{
 
         align-items: top;
-    
 
     }
-    
+    .conclusioni{
+        height: 150vh;
+    }
 
 
  }
 
 /* Tablet in modalità orizzontale */
 @media all and (min-width: 737px) and (max-width: 1199px) { 
-    /* .main{
+    .main{
         background-color: red;
-    } */
+    }
     /* intro */
     .landing{
         height:180vh;
