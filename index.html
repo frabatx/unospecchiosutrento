@@ -649,6 +649,18 @@
                 
             </section>
         </div>
+
+        <script language="Javascript">
+            window.onload=function(){
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                document.getElementsByTagName('body')[0].style.display = 'none';
+                alert("Visit this on a Computer for Better View");              
+            } else {
+        
+            }
+          }
+        </script>
         
         
         <!-- External JS library -->
